@@ -1,0 +1,92 @@
+﻿<Window x:Class="NumericalBigProject1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NumericalBigProject1"        
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        FontFamily="Microsoft Yahei"
+        
+        mc:Ignorable="d"
+        Title="图像变形" Height="587.81" Width="916"
+        >
+    <Grid>
+        <Canvas Background="LavenderBlush">
+            <TextBlock TextWrapping="Wrap" Text="插值方式" FontSize="18" FontWeight="Bold" Height="22" Canvas.Left="425" Canvas.Top="40" Width="72"/>
+
+
+            <TextBlock Canvas.Left="425" TextWrapping="Wrap" Text="旋转扭曲" Canvas.Top="158" Height="28" Width="72" FontSize="18" FontWeight="Bold"/>
+            <Button Background="AntiqueWhite" Name="Rotate_change"  Content="Go!" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Canvas.Left="795" Canvas.Top="128" Height="68" Click="Rotate_change_Click"/>
+
+
+            <TextBlock Canvas.Left="425" TextWrapping="Wrap" Text="畸变校正" Canvas.Top="236" FontSize="18" FontWeight="Bold"/>
+            <Button Background="AntiqueWhite" Name="Distortion_Change" Content="Go!" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Canvas.Left="795" Canvas.Top="214" Height="71" Click="Distortion_Change_Click"/>
+
+
+
+            <RadioButton Name="Nearest" GroupName="Interpolation" IsChecked="True" Content="最近邻插值" FontSize="16" Canvas.Left="518" Canvas.Top="44" Unchecked="Nearest_Unchecked"/>
+            <RadioButton Name="Bilinear" GroupName="Interpolation" Content="双线性插值" Canvas.Left="648" FontSize="16" Canvas.Top="44" Unchecked="Bilinear_Unchecked"/>
+            <RadioButton Name="Bicubic" GroupName="Interpolation" Content="双三次插值" Canvas.Left="769" FontSize="16" Canvas.Top="44" Unchecked="Bicubic_Unchecked"/>
+
+            <Label Content="最大旋转角(°)" FontSize="18" Canvas.Left="518" Canvas.Top="128" Width="122" Height="37"/>
+            <TextBox Name="TextBox_Rotate"  Height="37" FontSize="24" Canvas.Left="518" TextWrapping="Wrap" Text="30" Canvas.Top="159" Width="112"/>
+
+            <Label Content="旋转半径" FontSize="18" Canvas.Left="650" Canvas.Top="127" Width="122"/>
+            <TextBox Name="TextBox_Radius" Height="37" FontSize="24" Canvas.Left="650" TextWrapping="Wrap" Text="200" Canvas.Top="159" Width="121"/>
+            <Label Content="横坐标" FontSize="18" Canvas.Left="518" Canvas.Top="85" Width="69" Height="37"/>
+            <Label Content="纵坐标" FontSize="18" Canvas.Left="698" Canvas.Top="84" Width="66"/>
+            <TextBox Name="Center_X"  Height="37" FontSize="24" Canvas.Left="587" TextWrapping="Wrap" Text="0" Canvas.Top="81" Width="91"/>
+            <TextBox Name="Center_Y"  Height="37" FontSize="24" Canvas.Left="769" TextWrapping="Wrap" Text="0" Canvas.Top="81" Width="96"/>
+            <TextBlock Canvas.Left="425" TextWrapping="Wrap" Text="旋转中心" Canvas.Top="90" Height="28" Width="72" FontSize="18" FontWeight="Bold"/>
+            <Label Content="畸变参数" FontSize="18" Canvas.Left="518" Canvas.Top="231" Width="82"/>
+            <TextBox x:Name="TextBox_DistortionRadius" Height="37" FontSize="24" Canvas.Left="618" TextWrapping="Wrap" Text="0.5" Canvas.Top="227" Width="121"/>
+
+
+            <Canvas Height="513" Width="380" Canvas.Left="22" Canvas.Top="23" Background="White">
+                <Image Name="ShowImg" Height="413" Canvas.Left="14" Canvas.Top="22" Width="342"/>
+
+                <Button Name ="SaveImg"
+                        Background="AntiqueWhite"
+                    Content="保存图片" FontSize="16"
+                    Click="SaveImg_Click"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"   
+                    Width="99" Canvas.Left="135" Canvas.Top="440" Height="59"/>
+
+                <Button Name="Restore"
+                    Content="恢复原图"
+                        Background="AntiqueWhite"
+                    Click="Restore_Click" FontSize="16"
+                        
+                    HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Canvas.Left="258" Canvas.Top="440" Height="59"/>
+
+                <Button Name="ReadImg"
+                        Background="AntiqueWhite"
+                        Content="读入图片"
+                        FontSize="16"
+                    Click="ReadImg_Click"
+                    HorizontalAlignment="Left" VerticalAlignment="Top" Width="98" Canvas.Left="15" Canvas.Top="440" Height="59"/>
+
+            </Canvas>
+
+                <Canvas Height="232" Width="459" Canvas.Left="425" Canvas.Top="304" Background="Lavender">
+                    <Image x:Name="ShowImg_Face" Height="199" Canvas.Left="20" Canvas.Top="20" Width="284"/>
+                <Button x:Name="ReadImg_Face" Background="AntiqueWhite"
+                Content="读入目标图片"
+                Click="ReadImg_Face_Click"
+                        FontSize="16"
+                HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Canvas.Left="326" Canvas.Top="65" Height="59"/>
+                <Button x:Name="Wrap" Background="AntiqueWhite"
+                Content="进行TPS变化" FontSize="16"
+                Click="Wrap_Click"
+                HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Canvas.Left="326" Canvas.Top="141" Height="59"/>
+                    <Label Canvas.Left="334"  Content="TPS变换" Canvas.Top="20" FontSize="24" FontWeight="Bold" Width="109" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40"/>
+
+                </Canvas>
+        </Canvas>
+
+    </Grid>
+</Window>

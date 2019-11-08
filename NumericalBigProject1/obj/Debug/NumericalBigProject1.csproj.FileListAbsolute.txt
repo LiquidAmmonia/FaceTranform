@@ -1,0 +1,14 @@
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\bin\Debug\NumericalBigProject1.exe.config
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\bin\Debug\NumericalBigProject1.exe
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\bin\Debug\NumericalBigProject1.pdb
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\NumericalBigProject1.csprojAssemblyReference.cache
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\MainWindow.g.cs
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\App.g.cs
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\NumericalBigProject1_MarkupCompile.cache
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\NumericalBigProject1_MarkupCompile.lref
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\MainWindow.baml
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\NumericalBigProject1.g.resources
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\NumericalBigProject1.Properties.Resources.resources
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\NumericalBigProject1.csproj.GenerateResource.cache
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\NumericalBigProject1.exe
+C:\Users\www50\Desktop\NumericalBigProject1\NumericalBigProject1\obj\Debug\NumericalBigProject1.pdb
